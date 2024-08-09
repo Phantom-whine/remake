@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>LOG-AI</title>
+</head>
+<body>
+    <button id="trigger"><img src="svgs/code-compare-svgrepo-com.svg" alt="">Upload svg</button>
+    <div class="div-center">
+        <button id="dismiss">x</button>
+        <textarea placeholder="SVG code here" id="code"></textarea>
+        <button id="submit-svg"><img src="svgs/code-compare-svgrepo-com.svg" alt="">Upload code</button>
+    </div>
+    <main class="container">
+        <div class="main-flex">
+            <div class="div1">
+                <div class="logo">
+                    <img src="svgs/reload-svgrepo-com.svg" alt="logo" class="img-logo">
+                </div>
+                <div class="section">
+                    <button onclick="change('text')"><img src="svgs/text-field-svgrepo-com.svg" alt="" class="img"></button>
+                    <p class="p">Text</p>
+                </div>
+                <div class="section">
+                   <button onclick="change('box')"> <img src="svgs/box-minimalistic-svgrepo-com.svg" alt="" class="img"></button>
+                    <p class="p">Box</p>
+                </div>
+                <div class="section">
+                    <button onclick="change('icon')"><img src="svgs/bubble-chart-svgrepo-com.svg" alt="" class="img"></button>
+                    <p class="p">Icon</p>
+                </div>
+                <div class="section">
+                    <button onclick="change('layout')"><img src="svgs/layout-16-svgrepo-com.svg" alt="" class="img-layout"></button>
+                    <p class="p">Layout</p>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="div-header">
+                    <h1>Text</h1>
+                </div>
+                <div class="section-g" id="text">
+                    <div class="center mt-2"><input type="text" value="Lorem" id="text-content" placeholder="Type your logo name." class="input-main"></div>
+                    <div class="center">
+                        <div class="btn-group mt-2">
+                            <p class="group-title p">Font Weight</p>
+                            <button class="active" id="n" onclick="bold(1, 'n')">Normal</button>
+                            <button class="noactive" id="sb" onclick="bold(2, 'sb')">Semi bold</button>
+                            <button class="noactive" id="b" onclick="bold(3, 'b')">Bold</button>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="slider-group mt-2">
+                            <p class="group-title p">Font size</p>
+                            <input type="range" id="font-range" min="50" max="70" value="50">
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="slider-group mt-2">
+                            <p class="group-title p">Letter spacing</p>
+                            <input type="range" id="letter-space" min="0.5" max="10" value="0.5">
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="group mt-1 w-90">
+                            <div class="sect1">
+                                <p class="group-title p">Font family</p>
+                                <select id="font-family">
+                                    <option value="vector">Vector</option>
+                                    <option value="monospace">Monospace</option>
+                                    <option value="Arial, Helvetica, sans-serif" selected>Arial</option>
+                                    <option value="Georgia, 'Times New Roman', Times, serif">Times New Roman</option>
+                                    <option value="bionix">Bionix</option>
+                                    <option value="kontra">Kontra</option>
+                                    <option value="kontra-regular">Kontra Regular</option>
+                                    <option value="kontra-bold">Kontra Bold</option>
+                                    <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+                                </select>
+                            </div>
+                            <div class="sect1 mt-1">
+                                <p class="group-title p">Text shadow</p>
+                                <select id="text-shadow">
+                                    <option value="1" selected>No shadow</option>
+                                    <option value="2">Small</option>
+                                    <option value="3">Medium</option>
+                                    <option value="4">Large</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center mt-2 w-90">
+                        <div class="color-pick w-90">
+                            <input type="color" id="color-font">
+                            <div class="up-group mt-1">
+                                #000000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-g" id="box">
+                    <div class="group">
+                        <div class="center mt-2 w-90">
+                            <div class="color-pick w-90">
+                                <p class="group-title p">Background Color</p>
+                                <input type="color" id="box-color" value="#FFFFFF">
+                                <div class="up-group-bg mt-1">
+                                    #FFFFFF
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="slider-group mt-2">
+                            <p class="group-title p">Border radius <span class="count" id="br">5px</span></p>
+                            <input type="range" id="border-radius" min="1" max="50" value="5">
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="slider-group mt-2">
+                            <p class="group-title p">Border Thickness <span class="count" id="bt">2px</span></p>
+                            <input type="range" id="border-thick" min="1" max="20" value="2">
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="center mt-2 w-90">
+                            <div class="color-pick w-90">
+                                <p class="group-title p">Border Color</p>
+                                <input type="color" id="border-color">
+                                <div class="up-group-bc mt-1">
+                                    #000000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="section-g" id="layout">
+                    <button class="lay-btn mt-2" onclick="change_layout(1)">
+                        <img src="static/layout1.png" class="layout">
+                    </button>
+                    <button class="lay-btn mt-2">
+                        <img src="static/layout2.png" class="layout" onclick="change_layout(2)">
+                    </button>
+                    <button class="lay-btn mt-2">
+                        <img src="static/layout3.png" class="layout" onclick="change_layout(3)">
+                    </button>
+                    <button class="lay-btn mt-2">
+                        <img src="static/layout4.png" class="layout" onclick="change_layout(4)">
+                    </button>
+                </div>
+                <div class="section-g mt-2" id="icon">
+                    <div class="center">
+                        <div class="search">
+                            <input type="search" id="search" placeholder="Search Icon">
+                        </div>
+                    </div>
+                    <div class="icons-flex mt-2 w-90">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="work-flow">
+                    <div class="logo-place">
+                        <div class="center top">
+                            <div class="cage">
+                                <div class="icon-cage"><svg width="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.75 9.11998L14.9 7.26998C14.2 6.56998 13.24 6.60998 12.77 7.34998L11.74 8.97998L15.03 12.27L16.66 11.24C17.37 10.8 17.41 9.76998 16.75 9.11998Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.74 8.97993L9.35 8.83993C8.01 8.75993 7.55 9.16993 7.4 10.4399L6.8 15.5099C6.67 16.5799 7.44 17.3399 8.51 17.2199L13.58 16.6199C14.85 16.4699 15.31 16.0099 15.18 14.6699L15.04 12.2799" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.49 16.5199L9.34 14.6699" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg></div>
+                                <div class="text-cage"><p id="logo-text">Lorem</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <button id="download"><img src="svgs/download-square-svgrepo-com.svg" alt=""> Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="static/script.js"></script>
+</body>
+</html>

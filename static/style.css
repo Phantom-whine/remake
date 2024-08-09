@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: vector;
+    src: url(3bc99c08afa436d6-s.p.ttf);
+}
+@font-face {
+    font-family: bionix;
+    src: url(fonnts.com-Bionix-demo.otf);
+}
+@font-face {
+    font-family: kontra;
+    src: url(fonnts.com-KontrapunktMikiBold.otf);
+}
+@font-face {
+    font-family: kontra-regular;
+    src: url(fonnts.com-KontrapunktMikiRegular.otf);
+}
+@font-face {
+    font-family: kontra-bold;
+    src: url(fonnts.com-KontrapunktMikiExtraBold.otf);
+}
+.p{
+    font-family: vector;
+    font-weight: bold;
+}
+.main-flex{
+    display: flex;
+    height: 100vh;
+}
+.div1{
+    border: 1px solid black;
+    width: 5%;
+}
+.div2{
+    border: 1px solid #dddddd;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.div3{
+    border: 1px solid #dddddd;
+    width: 75%;
+    background-image: url(../backgrounds/istockphoto-1427921411-612x612.jpg);
+}
+.img{
+    width: 68%;
+}
+.img-layout{
+    width: 60%;
+}
+.img-logo{
+    width: 65%;
+    margin-left: 17.5%;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logo{
+    margin-bottom: 20px;
+    border: 1px solid white;
+    background-color: #f6f6f6;
+    height: 50px;
+    padding-top: 10px;
+}
+.work-flow{
+    border: 4px solid #f6f6f6;
+    background-color: white;
+    padding: 20px;
+    min-width: 300px;
+    min-height: 250px;
+    position: relative;
+    top: 26%;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.logo-place{
+    border: 3px solid rgb(64, 64, 64);
+    height: 220px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#download, #submit-svg{
+    border: 2px solid #1c274c;
+    padding: 5px;
+    width: 100px;
+    font-family: vector;
+    font-weight: bold;
+    color: white;
+    background-color: #1c274c;
+    border-radius: 5px;
+    margin-top: 13px;
+}
+#submit-svg, #trigger{
+    border: 2px solid #1c274c;
+    padding: 5px;
+    width: 170px;
+    font-family: vector;
+    font-weight: bold;
+    color: white;
+    background-color: #1c274c;
+    border-radius: 5px;
+    margin-top: 13px;
+}
+#submit-svg{
+    float: right;
+}
+#download img, #submit-svg img, #trigger img{
+    width: 17px;
+}
+#download:active{
+    border: 2px solid #324275;
+    background-color: #324275;
+    transition: 0.1s;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.div-header{
+    border: 2px solid #f6f6f6;
+    background-color: #f6f6f6;
+    padding: 3px;
+    font-family: vector;
+    width: 90%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.section button{
+    border: none;
+    background-color: transparent;
+}
+.section:hover > p{
+    transition: 0.3s;
+    color: rgb(69, 69, 255);
+    cursor: pointer;
+}
+.alert{
+    position: absolute;
+}
+.btn-group button{
+    border: 2px solid black;
+    width: fit-content;
+    padding: 5px;
+    font-family: monospace;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: 0.1s;
+}
+.btn-group button:hover{
+    transform: translateY(-3px);
+    transition: 0.1s;
+}
+.noactive{
+    background-color: white;
+}
+.active{
+    background-color: #1c274c;
+    color: white;
+}
+.input-main{
+    border: 2px solid #1c274c;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+}
+::placeholder{
+    font-family: vector;
+}
+.mt-2{
+    margin-top: 20px;
+}
+.btn-group{
+    width: 90%;
+}
+.slider-group{
+    width: 90%;
+}
+.w-90{
+    width: 90%;
+}
+.w-100{
+    width: 100%;
+}
+#color-font, #box-color, #border-color{
+    width: 110%;
+    height: 120px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+.up-group, .up-group-bg, .up-group-bc{
+    border: 1px solid #1c274c;
+    width: 109%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: vector;
+    padding-top: 7px;
+}
+.mt-1{
+    margin-top: 10px;
+}
+input[type='range']{
+    width: 95%;
+}
+
+#logo-text{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 0.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 5px;
+}
+select{
+    border: 2px solid #1c274c;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+}
+.search{
+    border: 2px solid #1c274c;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.search input{
+    width: 100%;
+    outline: none;
+    padding: 3px;
+    border: none;
+}
+.box-svg{
+    width: 90%;
+    border: 2px solid #dddddd;
+    background-color: #dddddd;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+.box-svg img{
+    width: 90%;
+}
+.icons-flex{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.icon-main{
+    width: 100px;
+}
+.cage{
+    display: flex;
+    border: 2px solid black;
+    height: 85px;
+    padding-top: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+.top{
+    position: relative;
+    top: 50px;
+}
+#box, #layout, #icon{
+    display: none;
+}
+#icon{
+    overflow-y: auto;
+}
+.icon-cage{
+    margin-right: 5px;
+}
+.icon-cage svg{
+    position: relative;
+    z-index: 2;
+    top: 5px;
+}
+.count{
+    border: 2px solid #dddddd;
+    background-color: #dddddd;
+    border-radius: 2px;
+    float: right;
+}
+textarea{
+    height: 100px;
+    display: block;
+    border: 2px solid #1c274c;
+    border-radius: 5px;
+    resize: vertical;
+    width: 99%;
+}
+.lay-btn{
+    border: 2px solid white;
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+}
+.layout{
+    width: 100%;
+}
+#trigger{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.div-center{
+    position: absolute;
+    background-color: white;
+    border: 3px solid #dddddd;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    right: 20px;
+    top: 65px;
+    z-index: 3;
+    display: none;
+}
+#dismiss{
+    position: relative;
+    left: 93%;
+    padding: 5px;
+    margin-bottom: 3px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: 1px solid red;
+    border-radius: 3px;
+}
