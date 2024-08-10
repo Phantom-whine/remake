@@ -431,7 +431,11 @@ var icon_list = [
 
 </g>
 
-</svg>`, 'Human icon 2', 21]
+</svg>`, 'Human icon 2', 21],
+[`<svg width="60px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 8V15.3C18 16.4201 18 16.9802 17.782 17.408C17.5903 17.7843 17.2843 18.0903 16.908 18.282C16.4802 18.5 15.9201 18.5 14.8 18.5H12M18 8C19.3807 8 20.5 6.88071 20.5 5.5C20.5 4.11929 19.3807 3 18 3C16.6193 3 15.5 4.11929 15.5 5.5C15.5 6.88071 16.6193 8 18 8ZM12 18.5L14 16M12 18.5L14 21M6 16V8.7C6 7.5799 6 7.01984 6.21799 6.59202C6.40973 6.21569 6.71569 5.90973 7.09202 5.71799C7.51984 5.5 8.0799 5.5 9.2 5.5H12M6 16C4.61929 16 3.5 17.1193 3.5 18.5C3.5 19.8807 4.61929 21 6 21C7.38071 21 8.5 19.8807 8.5 18.5C8.5 17.1193 7.38071 16 6 16ZM12 5.5L10 8M12 5.5L10 3" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`, 'Code compare', 22],
+[`<svg fill="#000000" width="60px"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>light_switch</title><path d="M18.41,1.59A2,2,0,0,0,17,1H7A2,2,0,0,0,5,3V21a2,2,0,0,0,2,2H17a2,2,0,0,0,2-2V3A2,2,0,0,0,18.41,1.59ZM17,21H7V3H17Z" /><path d="M15,6H9V18h6ZM13,16H11V13h2Zm0-5H11V8h2Z" /></svg>`, 'Light switch', 23]
 ]
 
 function change_icon(ndx){
@@ -482,13 +486,10 @@ function bold(step, id){
     btn.className = 'active'
     if(step === 1){
         effect.style.fontWeight = '500';
-        effect.style.top = '8px';
     }else if(step == 2){
         effect.style.fontWeight = 'bold';
-        effect.style.top = '8px';
     }else{
         effect.style.fontWeight = '1000';
-        effect.style.top = '8px';
     }
 }
 
@@ -554,8 +555,7 @@ function search(value){
     }
     flex.innerHTML = '';
     for(icon of results){
-        console.log(2)
-        document.querySelector('.icons-flex').innerHTML += `
+            document.querySelector('.icons-flex').innerHTML += `
             <div class='box-svg' onclick="change_icon(${icon[2]})">
                 ${icon[0]}
                 <p class='p'> ${icon[1]}</p>
@@ -626,21 +626,29 @@ function change_layout(int){
     if(int == 1){
         box.style.flexDirection = 'row';
         box.style.height = '85px';
+        box.style.top = '20px';
     }else if(int == 2){
         box.style.flexDirection = 'row-reverse';
         box.style.height = '85px';
+        box.style.top = '20px';
     }else if(int == 3){
         box.style.flexDirection = 'column';
         box.style.height = 'fit-content';
+        box.style.top = '1px';
     }else{
         box.style.flexDirection = 'column-reverse';
         box.style.height = 'fit-content';
+        box.style.top = '1px';
     }
 }
 
+var open = false;
 document.querySelector('#trigger').addEventListener('click', ()=>{
-    document.querySelector('.div-center').style.display = 'block';
-})
-document.querySelector('#dismiss').addEventListener('click', ()=>{
-    document.querySelector('.div-center').style.display = 'none';
+    if(open == false){
+        document.querySelector('.div-center').style.display = 'block';
+        open = true;
+    }else{
+        document.querySelector('.div-center').style.display = 'none';
+        open = false;
+    }
 })
