@@ -274,6 +274,13 @@ select{
     text-align: center;
     margin-left: 10%;
     margin-bottom: 10px;
+    transition: 0.3s;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.box-svg:hover{
+    transition: 0.3s;
+    transform:scale(.92);
 }
 .box-svg img{
     width: 90%;
